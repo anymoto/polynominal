@@ -29,7 +29,7 @@ describe Polynominal do
 
     describe '#initialize' do
       it 'raises an exception' do
-        expect(Polynominal.new(input)).to raise_error('Please provide at least two coefficients')
+        lambda { Polynominal.new(input) }.should raise_error('Please provide at least two coefficients')
       end
     end
   end
